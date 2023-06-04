@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: [],
+    domains: ["s3.us-west-2.amazonaws.com"],
   },
   env: {
     notionKey: process.env.NOTION_TOKEN,
