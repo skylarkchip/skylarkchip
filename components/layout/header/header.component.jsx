@@ -14,7 +14,7 @@ const Header = () => {
     <Box w="full" py="8">
       <Container maxW="5xl">
         <Flex justifyContent="space-between" alignItems="center">
-          <Box w="full">
+          <Box>
             <Link
               href="/"
               _hover={{ textDecoration: "none" }}
@@ -40,17 +40,16 @@ const Header = () => {
           </Box>
           <Flex gap="10" alignItems="center">
             <HStack spacing="4" display={{ base: "none", md: "flex" }}>
-              <Button
-                variant="link"
+              <Link
+                href="/works"
                 color="gray.800"
                 fontFamily="primary"
                 fontSize="xl"
                 fontWeight="medium"
-                onClick={() => router.push("/works")}
                 _hover={{ color: "gray.400" }}
               >
                 Works
-              </Button>
+              </Link>
             </HStack>
             {router.pathname === "/" && (
               <Button
