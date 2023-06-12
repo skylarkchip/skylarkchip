@@ -105,7 +105,7 @@ const ProjectListItem = ({ project, idx }) => {
             alt={project.properties.Name.title[0].text.content}
             width={1800}
             height={1000}
-            h="full"
+            h={{ base: "full", md: "200px", lg: "full"}}
             w="full"
             style={{ objectFit: "cover" }}
           />
