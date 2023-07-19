@@ -2,23 +2,18 @@ import React from "react";
 import dynamic from "next/dynamic";
 import {
   Avatar,
-  Badge,
   Box,
   Button,
   Container,
-  Flex,
   Heading,
   Icon,
   IconButton,
-  Image,
-  Stack,
   Text,
   VStack,
 } from "@chakra-ui/react";
-import { BsArrowUpRight, BsGithub } from "react-icons/bs";
+import { BsGithub } from "react-icons/bs";
 import { useRouter } from "next/router";
 import { Link } from "@chakra-ui/next-js";
-import { motion } from "framer-motion";
 
 // Components
 const Layout = dynamic(() => import("@/components/layout/layout.component"));
@@ -40,7 +35,7 @@ const HomePage = () => {
             textAlign="center"
           >
             Hi, I&rsquo;m a Front-end developer based in{" "}
-            <Text as="span" fontStyle="italic" color="red.400">
+            <Text as="span" fontStyle="italic" color="teal.300">
               Manila.
             </Text>
           </Heading>
@@ -119,7 +114,10 @@ const HomePage = () => {
                 collab
               </Text>
             </Heading>
-            <IconButton
+            <Link href="https://github.com/skylarkchip" target="_blank">
+              <Icon as={BsGithub} color="gray.800" boxSize="10" />
+            </Link>
+            {/* <IconButton
               icon={<Icon as={BsGithub} color="white" />}
               bgColor="black"
               borderRadius="full"
@@ -128,7 +126,7 @@ const HomePage = () => {
               onClick={() => {
                 router.push("https://github.com/skylarkchip");
               }}
-            />
+            /> */}
             <Text
               fontFamily="primary"
               fontSize={{ base: "xl", md: "2xl" }}
@@ -137,7 +135,7 @@ const HomePage = () => {
               textAlign="center"
             >
               You may contact me here{" "}
-              <Link href="mailto:markmarasigandev@gmail.com" color="red.400">
+              <Link href="mailto:markmarasigandev@gmail.com" color="teal.300">
                 markmarasigandev@gmail.com
               </Link>
             </Text>

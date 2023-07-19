@@ -8,8 +8,7 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
-import Link from "next/link";
-import { Image } from "@chakra-ui/next-js";
+import { Image, Link } from "@chakra-ui/next-js";
 import { BsArrowUpRight, BsGithub } from "react-icons/bs";
 
 const ProjectListItem = ({ project, idx }) => {
@@ -31,7 +30,13 @@ const ProjectListItem = ({ project, idx }) => {
         px="10"
         justifyContent="center"
       >
-        <Heading as="h3" fontFamily="primary" fontSize="2xl" color="red.400">
+        <Heading
+          as="h3"
+          fontFamily="primary"
+          fontSize="2xl"
+          textAlign={{ base: "center", md: "unset" }}
+          color="teal.300"
+        >
           {project.properties.Name.title[0].text.content}
         </Heading>
         {project.properties.Description.rich_text.length > 0 && (
@@ -41,22 +46,23 @@ const ProjectListItem = ({ project, idx }) => {
               fontSize="lg"
               fontWeight="normal"
               color="black"
+              textAlign={{ base: "center", md: "unset" }}
             >
               {project.properties.Description.rich_text[0].plain_text}
             </Text>
           </Box>
         )}
-        <Flex w="full" gap="4">
+        <Flex w="full" justifyContent={{ base: "center", md: "unset" }} gap="4">
           {project.properties.Link.url && (
             <Link
-              color="white"
+              color="blackAlpha.800"
               fontFamily="primary"
               fontWeight="medium"
               px="4"
               py="2"
               href={project.properties.Link.url}
               target="_blank"
-              _hover={{ bgColor: "gray.400" }}
+              _hover={{ bgColor: "teal.300", color: "white" }}
             >
               <Flex alignItems="center" gap="2">
                 <Text>Link</Text>
@@ -66,14 +72,14 @@ const ProjectListItem = ({ project, idx }) => {
           )}
           {project.properties.Repo.url && (
             <Link
-              color="white"
+              color="blackAlpha.800"
               fontFamily="primary"
               fontWeight="medium"
               px="4"
               py="2"
               href={project.properties.Repo.url}
               target="_blank"
-              _hover={{ bgColor: "gray.400" }}
+              _hover={{ bgColor: "teal.300", color: "white" }}
             >
               <Flex alignItems="center" gap="2">
                 <Text>Repo</Text>
@@ -82,7 +88,12 @@ const ProjectListItem = ({ project, idx }) => {
             </Link>
           )}
         </Flex>
-        <Flex gap="2" flexWrap="wrap" w="full">
+        <Flex
+          gap="2"
+          flexWrap="wrap"
+          justifyContent={{ base: "center", md: "unset" }}
+          w="full"
+        >
           {project.properties.Stack.multi_select.map((p) => (
             <Badge
               key={p.id}
@@ -105,7 +116,7 @@ const ProjectListItem = ({ project, idx }) => {
             alt={project.properties.Name.title[0].text.content}
             width={1800}
             height={1000}
-            h={{ base: "full", md: "200px", lg: "full"}}
+            h={{ base: "full", md: "200px", lg: "full" }}
             w="full"
             style={{ objectFit: "cover" }}
           />

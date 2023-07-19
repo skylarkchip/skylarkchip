@@ -6,9 +6,7 @@ const Footer = () => {
     <Box w="full" py="6">
       <Container maxW="5xl">
         <Flex w="full" justifyContent="center">
-          <Text fontFamily="primary">
-            &copy; 2023 Mark Marasigan. All rights reserved.
-          </Text>
+          <Text fontFamily="primary">&copy; 2023 Mark Marasigan.</Text>
         </Flex>
       </Container>
     </Box>

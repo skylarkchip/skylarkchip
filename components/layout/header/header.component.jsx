@@ -13,7 +13,13 @@ const Header = () => {
   return (
     <Box w="full" py="8">
       <Container maxW="5xl">
-        <Flex justifyContent="space-between" alignItems="center">
+        <Flex
+          justifyContent={{
+            base: `${router.pathname === "/" ? "space-between" : "center"}`,
+            md: "space-between",
+          }}
+          alignItems="center"
+        >
           <Box>
             <Link
               href="/"
@@ -32,9 +38,6 @@ const Header = () => {
                 _hover={{ color: "gray.400" }}
               >
                 markmarasigan
-                <Text as="span" color="red.400">
-                  _
-                </Text>
               </Text>
             </Link>
           </Box>

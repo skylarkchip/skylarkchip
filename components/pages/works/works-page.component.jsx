@@ -19,7 +19,7 @@ const WorksPage = ({ projects }) => {
           <VStack spacing="16" align="center" w="full">
             <Heading as="h2" fontFamily="primary">
               My
-              <Text as="span" fontStyle="italic" color="red.400">
+              <Text as="span" fontStyle="italic" color="teal.300">
                 works
               </Text>
             </Heading>
