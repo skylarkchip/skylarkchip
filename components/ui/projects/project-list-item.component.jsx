@@ -15,6 +15,7 @@ const ProjectListItem = ({ project, idx }) => {
   return (
     <Flex
       key={project.id}
+      alignItems="center"
       justifyContent="space-between"
       flexDirection={{
         base: "column-reverse",
@@ -25,7 +26,7 @@ const ProjectListItem = ({ project, idx }) => {
       <VStack
         w="full"
         align="left"
-        spacing="10"
+        spacing="4"
         py="4"
         px="10"
         justifyContent="center"
@@ -109,7 +110,7 @@ const ProjectListItem = ({ project, idx }) => {
           ))}
         </Flex>
       </VStack>
-      <Box w="full" px="4" py="6">
+      <Box w="full" h={{ base: "full", md: "300px" }} px="4" py="6">
         {project.properties.Images.files.length > 0 ? (
           <Image
             src={project.properties.Images.files[0].file.url}
@@ -119,6 +120,10 @@ const ProjectListItem = ({ project, idx }) => {
             h={{ base: "full", md: "200px", lg: "full" }}
             w="full"
             style={{ objectFit: "cover" }}
+            opacity={0}
+            transition="linear"
+            transitionDuration="2s"
+            onLoadingComplete={(image) => (image.style = "opacity: 1")}
           />
         ) : (
           <Image
