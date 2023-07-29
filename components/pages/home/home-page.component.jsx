@@ -54,7 +54,7 @@ const HomePage = () => {
             >
               <Avatar
                 size="full"
-                src="/pang.jpg"
+                src="/pang-2.jpg"
                 objectFit="cover"
                 w="full"
                 h="full"
@@ -117,16 +117,6 @@ const HomePage = () => {
             <Link href="https://github.com/skylarkchip" target="_blank">
               <Icon as={BsGithub} color="gray.800" boxSize="10" />
             </Link>
-            {/* <IconButton
-              icon={<Icon as={BsGithub} color="white" />}
-              bgColor="black"
-              borderRadius="full"
-              size="lg"
-              _hover={{ bgColor: "blackAlpha.600" }}
-              onClick={() => {
-                router.push("https://github.com/skylarkchip");
-              }}
-            /> */}
             <Text
               fontFamily="primary"
               fontSize={{ base: "xl", md: "2xl" }}
