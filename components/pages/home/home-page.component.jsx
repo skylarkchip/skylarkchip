@@ -54,7 +54,7 @@ const HomePage = () => {
             >
               <Avatar
                 size="full"
-                src="/pang-2.jpg"
+                src="/pang-2.jpeg"
                 objectFit="cover"
                 w="full"
                 h="full"
