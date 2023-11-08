@@ -83,9 +83,9 @@ const HomePage = () => {
                 In addition, I have expertise in theme development for CMS
                 platforms such as WordPress and Shopify, including creating
                 custom themes from scratch and customizing existing themes to
-                meet specific client needs. I am also familiar in CSS libraries
-                such as Tailwind CSS, Chakra UI and Bootstrap to speed up the
-                development and enhance the look and feel of the website.
+                meet specific client needs. I am also familiar with CSS
+                libraries such as Tailwind CSS, Chakra UI and Bootstrap to speed
+                up the development and enhance the look and feel of the website.
               </Text>
             </VStack>
             <Button
