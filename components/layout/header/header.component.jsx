@@ -51,7 +51,7 @@ const Header = () => {
                 fontWeight="medium"
                 _hover={{ color: "gray.400" }}
               >
-                Works
+                Projects
               </Link>
             </HStack>
             {router.pathname === "/" && (

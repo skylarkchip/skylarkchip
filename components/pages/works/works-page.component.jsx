@@ -20,7 +20,7 @@ const WorksPage = ({ projects }) => {
             <Heading as="h2" fontFamily="primary">
               My
               <Text as="span" fontStyle="italic" color="teal.300">
-                works
+                projects
               </Text>
             </Heading>
             <ProjectList projects={projects} />
