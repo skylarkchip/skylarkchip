@@ -44,9 +44,9 @@ const ProjectListItem = ({ project, idx }) => {
           <Box w="full">
             <Text
               fontFamily="primary"
-              fontSize="lg"
+              fontSize="md"
               fontWeight="normal"
-              color="black"
+              color="blackAlpha.800"
               textAlign={{ base: "center", md: "unset" }}
             >
               {project.properties.Description.rich_text[0].plain_text}

@@ -7,11 +7,11 @@ const WorksPage = dynamic(() =>
   import("@/components/pages/works/works-page.component")
 );
 
-const Works = (props) => {
+const Projects = (props) => {
   return <WorksPage projects={props.results} />;
 };
 
-export default Works;
+export default Projects;
 
 export async function getStaticProps() {
   const notion = new Client({ auth: process.env.notionKey });
