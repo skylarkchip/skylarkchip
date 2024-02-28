@@ -100,7 +100,7 @@ const HomePage = () => {
               px="8"
               size="lg"
               _hover={{ bgColor: "gray.400" }}
-              onClick={() => router.push("/works")}
+              onClick={() => router.push("/projects")}
             >
               My Portfolio
             </Button>

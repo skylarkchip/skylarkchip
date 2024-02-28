@@ -25,7 +25,7 @@ const Header = () => {
               href="/"
               _hover={{ textDecoration: "none" }}
               textAlign={{
-                base: `${router.pathname === "/works" && "center"}`,
+                base: `${router.pathname === "/projects" && "center"}`,
                 md: "left",
               }}
             >
@@ -44,11 +44,12 @@ const Header = () => {
           <Flex gap="10" alignItems="center">
             <HStack spacing="4" display={{ base: "none", md: "flex" }}>
               <Link
-                href="/works"
+                href="/projects"
                 color="gray.800"
                 fontFamily="primary"
-                fontSize="xl"
+                fontSize="lg"
                 fontWeight="medium"
+                letterSpacing="tight"
                 _hover={{ color: "gray.400" }}
               >
                 Projects
@@ -63,6 +64,7 @@ const Header = () => {
                 color="white"
                 fontFamily="primary"
                 fontWeight="normal"
+                letterSpacing="tight"
                 onClick={() => onNavigateHandler("#contact")}
                 _hover={{ bgColor: "gray.400" }}
               >
