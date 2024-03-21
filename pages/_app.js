@@ -1,3 +1,5 @@
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 
 import "@/styles/globals.css";
@@ -24,6 +26,8 @@ export default function App({ Component, pageProps }) {
   return (
     <ChakraProvider theme={theme}>
       <Component {...pageProps} />
+      <Analytics />
+      <SpeedInsights />
     </ChakraProvider>
   );
 }

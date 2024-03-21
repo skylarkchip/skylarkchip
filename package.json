@@ -19,6 +19,8 @@
     "@notion-render/client": "^0.0.2",
     "@notion-render/hljs-plugin": "^0.0.2",
     "@notionhq/client": "^2.2.5",
+    "@vercel/analytics": "^1.2.2",
+    "@vercel/speed-insights": "^1.0.10",
     "eslint": "8.41.0",
     "eslint-config-next": "13.4.3",
     "framer-motion": "^10.12.12",
